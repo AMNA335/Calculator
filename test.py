@@ -139,11 +139,3 @@ for row in button_rows:
                 st.button(label, on_click=press, args=("factorial(",), use_container_width=True)
             else:
                 st.button(label, on_click=press, args=(label,), use_container_width=True)
-
-# ----------------------------- History ----------------------------- #
-with st.expander("History"):
-    if st.session_state.history:
-        for item in st.session_state.history:
-            st.write(item)
-    else:
-        st.write("No calculations yet.")

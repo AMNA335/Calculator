@@ -147,9 +147,3 @@ with st.expander("History"):
             st.write(item)
     else:
         st.write("No calculations yet.")
-
-st.divider()
-st.caption(
-    "Tip: Functions like sin, cos, tan expect degrees. "
-    "Use ! for factorial, ^ for power, and % for percent (divides by 100)."
-)

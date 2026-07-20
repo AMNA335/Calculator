@@ -104,7 +104,6 @@ st.text_input(
     key="expr_box",
     value=st.session_state.expression,
     on_change=on_input_change,
-    placeholder="e.g. sin(30) + sqrt(16) * 2",
     label_visibility="collapsed",
 )
 

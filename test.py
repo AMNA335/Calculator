@@ -69,8 +69,11 @@ def evaluate_expression(expr: str) -> str:
 def on_input_change():
     """Triggered when the user types and presses Enter in the text box."""
     expr = st.session_state.expr_box
-    st.session_state.expression = expr
-    st.session_state.result = evaluate_expression(expr)
+    result = evaluate_expression(expr)
+    st.session_state.result = result
+    # Show the result directly inside the same input bar
+    st.session_state.expression = result
+    st.session_state.expr_box = result
 
 
 def press(value: str):
@@ -92,7 +95,11 @@ def delete_last():
 
 def calculate():
     expr = st.session_state.expression
-    st.session_state.result = evaluate_expression(expr)
+    result = evaluate_expression(expr)
+    st.session_state.result = result
+    # Show the result directly inside the same input bar
+    st.session_state.expression = result
+    st.session_state.expr_box = result
 
 
 # ----------------------------- UI ----------------------------- #
@@ -105,9 +112,6 @@ st.text_input(
     on_change=on_input_change,
     label_visibility="collapsed",
 )
-
-if st.session_state.result != "":
-    st.markdown(f"### = {st.session_state.result}")
 
 st.write("")  # spacing
 

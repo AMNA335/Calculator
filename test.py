@@ -97,7 +97,6 @@ def calculate():
 
 # ----------------------------- UI ----------------------------- #
 st.title("🧮  Welcome Scientific Calculator by Amna")
-st.caption("Type using your keyboard and press **Enter**, or click the buttons below.")
 
 st.text_input(
     "Expression",
